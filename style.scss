@@ -1001,6 +1001,7 @@ main#primary {
   align-items: flex-start;
   & .nm-scroller-nav {
     display: flex;
+    align-items: center;
     margin: 30px 0;
     z-index: 2;
     @media (max-width: 992px) {
@@ -1011,14 +1012,13 @@ main#primary {
     & .nm-scroller-right {
       width: 60px;
       height: 50px;
-      background-image: url(../img/deary-nav-right.svg);
+      background-image: url(./img/deary-nav-right.svg);
       background-position: center;
       background-repeat: no-repeat;
       background-size: 100%;
       cursor: pointer;
     }
     & .nm-scroller-left {
-      margin-right: 40px;
       transform: rotate(180deg);
     }
   }
