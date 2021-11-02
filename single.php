@@ -8,7 +8,6 @@
  */
 
 get_header();
-flush_rewrite_rules(true)
 ?>
 
 	<main id="primary" class="site-main">
