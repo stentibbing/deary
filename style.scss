@@ -4,7 +4,7 @@ Theme URI: https://www.deary.eu
 Author: Taifuun OÜ
 Author URI: https://www.taifuun.ee
 Description: Deary theme by Taifuun
-Version: 1.1.0
+Version: 1.1.1
 Tested up to: 5.4 
 Requires PHP: 5.6
 License: GNU General Public License v2 or later
@@ -1120,6 +1120,9 @@ main#primary {
       }
     }
     & .nm-product-top-center {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
       max-width: 400px;
       @media (max-width: $breakpoint-desktop) {
         max-width: 80%;
@@ -1130,7 +1133,7 @@ main#primary {
       max-width: 150px;
       & .nm-product-quote p {
         text-align: center;
-        font: 700 1.2rem/1.2 $font-objective;
+        font: 700 1.6rem/1.2 $font-objective;
       }
     } 
   }
