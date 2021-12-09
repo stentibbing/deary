@@ -873,7 +873,7 @@ h2 {
 
 p {
   color: #000000;
-  font: 200 0.9rem/1.9rem Objective, "Courier New", Courier, monospace;
+  font: 200 0.9rem/1.5 Objective, "Courier New", Courier, monospace;
 }
 
 a {
@@ -1201,112 +1201,112 @@ main#primary {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  min-height: 100%;
 }
 
 .nm-product .nm-product-top {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  margin: 0 0 50px 0;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
-.nm-product .nm-product-top .nm-product-title,
-.nm-product .nm-product-top .nm-product-content {
-  max-width: 50%;
+.nm-product .nm-product-top .nm-product-top-left {
+  max-width: 350px;
+}
+
+.nm-product .nm-product-top .nm-product-top-left h1 {
+  max-width: 400px;
+  font: 500 2.5rem/1.1 Objective, "Courier New", Courier, monospace;
 }
 
 @media (max-width: 1140px) {
-  .nm-product .nm-product-top .nm-product-title,
-  .nm-product .nm-product-top .nm-product-content {
-    max-width: unset;
+  .nm-product .nm-product-top .nm-product-top-left {
+    max-width: 80%;
   }
+}
+
+.nm-product .nm-product-top .nm-product-top-center {
+  max-width: 400px;
+}
+
+@media (max-width: 1140px) {
+  .nm-product .nm-product-top .nm-product-top-center {
+    max-width: 80%;
+    margin: 30px 0 0;
+  }
+}
+
+.nm-product .nm-product-top .nm-product-top-right {
+  max-width: 150px;
+}
+
+.nm-product .nm-product-top .nm-product-top-right .nm-product-quote p {
+  text-align: center;
+  font: 700 1.2rem/1.2 Objective, "Courier New", Courier, monospace;
 }
 
 .nm-product .nm-product-bottom {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.nm-product .nm-product-bottom .nm-product-image {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 70%;
 }
 
 @media (max-width: 1140px) {
-  .nm-product .nm-product-bottom .nm-product-image {
-    width: 50%;
+  .nm-product .nm-product-bottom {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 0 0 30px;
   }
 }
 
-.nm-product .nm-product-bottom .nm-product-nutrition-facts {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  padding: 30px;
-  margin-left: 50px;
-  border-left: solid 1px #000000;
-  width: 30%;
+.nm-product .nm-product-bottom h2 {
+  margin: 1.5rem 0;
+  font: 700 0.8rem/1 Objective, "Courier New", Courier, monospace;
 }
 
-.nm-product .nm-product-bottom .nm-product-nutrition-facts td {
-  text-align: left;
-  padding: 0.3rem 0;
-  font: 200 0.9rem/1.9rem Objective, "Courier New", Courier, monospace;
-  font-weight: 700;
+.nm-product .nm-product-bottom table thead td {
+  font: 200 0.7rem/1.2 Objective, "Courier New", Courier, monospace;
+  border-right: solid 1px #000;
 }
 
-@media (max-width: 1140px) {
-  .nm-product .nm-product-bottom .nm-product-nutrition-facts {
-    width: 50%;
-    margin: unset;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
+.nm-product .nm-product-bottom table thead td:last-child {
+  border: none;
 }
 
 @media (max-width: 768px) {
-  .nm-product .nm-product-bottom {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+  .nm-product .nm-product-bottom table thead td {
+    font: 200 0.6rem/1 Objective, "Courier New", Courier, monospace;
+    overflow-wrap: break-word;
   }
-  .nm-product .nm-product-bottom .nm-product-nutrition-facts {
-    width: 100%;
-    padding-top: 30px;
-    margin-top: 30px;
-    border: none;
-    border-top: solid 1px #000000;
+}
+
+.nm-product .nm-product-bottom table tbody td {
+  padding: 10px 20px 0;
+  font: 700 1.6rem/1.2 Objective, "Courier New", Courier, monospace;
+  border-right: solid 1px #000;
+}
+
+.nm-product .nm-product-bottom table tbody td:last-child {
+  border: none;
+}
+
+@media (max-width: 768px) {
+  .nm-product .nm-product-bottom table tbody td {
+    font: 700 1.1rem/1 Objective, "Courier New", Courier, monospace;
+    padding: 10px 0;
   }
 }
 
@@ -1434,7 +1434,7 @@ main#primary {
 
 .wpcf7-not-valid-tip,
 .wpcf7-response-output {
-  font: 200 0.9rem/1.9rem Objective, "Courier New", Courier, monospace;
+  font: 200 0.9rem/1.5 Objective, "Courier New", Courier, monospace;
   color: #ff9992;
 }
 
