@@ -1765,4 +1765,11 @@ footer.deary-footer {
   transition: all 0.2s ease-in-out;
   z-index: 1;
 }
+
+.upcoming-products-quote {
+  color: #ff9992;
+  font: 700 1.6rem/1.2 Objective, "Courier New", Courier, monospace;
+  -webkit-transform: rotate(5deg);
+          transform: rotate(5deg);
+}
 /*# sourceMappingURL=style.css.map */
