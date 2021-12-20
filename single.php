@@ -20,7 +20,7 @@ if (array_key_exists('nm_accent_color', $post_meta) && !empty($post_meta['nm_acc
 if (array_key_exists('nm_multicolor_title', $post_meta) && !empty($post_meta['nm_multicolor_title'])) {
     $multicolor_title = $post_meta['nm_multicolor_title'][0];
     $title = preg_replace_callback('/%(.*?)%/s', function ($matches) use ($accent_color) {
-        return '<span style="color:' . $accent_color . '">' . $matches[1] . '</span>';
+        return '<span style="color:' . $accent_color . ';">' . $matches[1] . '</span>';
     }, $multicolor_title);
 } else {
     $title = $post->post_title;
