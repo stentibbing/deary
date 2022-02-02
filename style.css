@@ -1297,36 +1297,98 @@ main#primary {
   font: 700 0.8rem/1 Objective, "Courier New", Courier, monospace;
 }
 
-.nm-product .nm-product-bottom table thead td {
-  font: 200 0.7rem/1.2 Objective, "Courier New", Courier, monospace;
-  border-right: solid 1px #000;
-}
-
-.nm-product .nm-product-bottom table thead td:last-child {
-  border: none;
-}
-
 @media (max-width: 768px) {
-  .nm-product .nm-product-bottom table thead td {
-    font: 200 0.6rem/1 Objective, "Courier New", Courier, monospace;
-    overflow-wrap: break-word;
+  .nm-product .nm-product-bottom h2 {
+    text-align: center;
   }
 }
 
-.nm-product .nm-product-bottom table tbody td {
-  padding: 10px 20px 0;
-  font: 700 1.6rem/1.2 Objective, "Courier New", Courier, monospace;
+.nm-product .nm-product-bottom .nm-product-nutrition-facts-table {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+
+.nm-product .nm-product-bottom .nm-product-nutrition-facts-table .nm-product-nutition-facts-col {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  padding: 10px 15px;
+  max-width: 110px;
   border-right: solid 1px #000;
 }
 
-.nm-product .nm-product-bottom table tbody td:last-child {
-  border: none;
+.nm-product .nm-product-bottom .nm-product-nutrition-facts-table .nm-product-nutition-facts-col:last-child {
+  border-right: none;
 }
 
-@media (max-width: 768px) {
-  .nm-product .nm-product-bottom table tbody td {
-    font: 700 1.1rem/1 Objective, "Courier New", Courier, monospace;
-    padding: 10px 0;
+.nm-product .nm-product-bottom .nm-product-nutrition-facts-table .nm-product-nutition-facts-col .nm-product-nutition-facts-nutrient {
+  font: 200 0.7rem/1.2 Objective, "Courier New", Courier, monospace;
+}
+
+.nm-product .nm-product-bottom .nm-product-nutrition-facts-table .nm-product-nutition-facts-col .nm-product-nutition-facts-value {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  padding: 10px 0 0;
+  font: 700 1.6rem/1.2 Objective, "Courier New", Courier, monospace;
+  word-wrap: break-word;
+}
+
+@media (max-width: 1140px) {
+  .nm-product .nm-product-bottom .nm-product-nutrition-facts-table {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .nm-product .nm-product-bottom .nm-product-nutrition-facts-table .nm-product-nutition-facts-col {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    max-width: unset;
+    border: none;
+  }
+  .nm-product .nm-product-bottom .nm-product-nutrition-facts-table .nm-product-nutition-facts-col .nm-product-nutition-facts-nutrient {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 50%;
+    text-align: left;
+  }
+  .nm-product .nm-product-bottom .nm-product-nutrition-facts-table .nm-product-nutition-facts-col .nm-product-nutition-facts-value {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    padding: 0 0 0 20px;
+    width: 50%;
   }
 }
 

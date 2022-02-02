@@ -1154,29 +1154,55 @@ main#primary {
     & h2 {
       margin: 1.5rem 0;
       font: 700 0.8rem/1 $font-objective;
+      @media (max-width: $breakpoint-mobile) {
+        text-align: center;
+      }
     }
-    & table {
-      & thead td {
-        font: 200 0.7rem/1.2 $font-objective;
+    & .nm-product-nutrition-facts-table {
+      display: flex;
+      align-items: flex-start;
+      align-items: stretch;
+      & .nm-product-nutition-facts-col {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding: 10px 15px;
+        max-width: 110px;
         border-right: solid 1px #000;
         &:last-child {
-          border: none;
+          border-right: none;
         }
-        @media (max-width: $breakpoint-mobile) {
-          font: 200 0.6rem/1 $font-objective;
-          overflow-wrap: break-word;
+        & .nm-product-nutition-facts-nutrient {
+          font: 200 0.7rem/1.2 $font-objective;
+        }
+        & .nm-product-nutition-facts-value {
+          display: flex;
+          align-items: flex-end;
+          justify-content: center;
+          flex-grow: 1;
+          padding: 10px 0 0;
+          font: 700 1.6rem/1.2 $font-objective;
+          word-wrap: break-word;
         }
       }
-      & tbody td {
-        padding: 10px 20px 0;
-        font: 700 1.6rem/1.2 $font-objective;
-        border-right: solid 1px #000;
-        &:last-child {
+      @media (max-width: $breakpoint-desktop) {
+        flex-direction: column;
+        & .nm-product-nutition-facts-col {
+          flex-direction: row;
+          max-width: unset;
           border: none;
-        }
-        @media (max-width: $breakpoint-mobile) {
-          font: 700 1.1rem/1 $font-objective;
-          padding: 10px 0;
+          & .nm-product-nutition-facts-nutrient {
+            display: flex;
+            align-items: center;
+            width: 50%;
+            text-align: left;
+          }
+          & .nm-product-nutition-facts-value {
+            align-items: center;
+            justify-content: flex-end;
+            padding: 0 0 0 20px;
+            width: 50%;
+          }
         }
       }
     }

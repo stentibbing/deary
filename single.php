@@ -56,9 +56,29 @@ get_header();
 				</div>
 			</div>	
 			<?php if (array_key_exists('nm_nutrition_facts', $post_meta)): ?>
-			<div class="nm-product-bottom">
+			<div class="nm-product-bottom">				
+				<?php 
+					$title = get_post_meta($post->ID, 'nm_nutrition_facts')[0]['title']; 
+					$facts = get_post_meta($post->ID, 'nm_nutrition_facts')[0]['facts'];
+				?>
 				<div class="nm-product-nutrition-facts">
-					<?php echo wpautop($post_meta['nm_nutrition_facts'][0]); ?>
+						<?php if(!empty($title) && is_string($title)): ?>
+							<h2><?php echo $title; ?></h2>
+						<?php endif; ?>
+						<?php if (!empty($facts) && is_array($facts)): ?>
+							<div class="nm-product-nutrition-facts-table">
+								<?php foreach($facts as $fact): ?>
+									<div class="nm-product-nutition-facts-col">
+										<div class="nm-product-nutition-facts-nutrient">
+											<?php echo $fact['nutrient']; ?>
+										</div>
+										<div class="nm-product-nutition-facts-value">
+											<?php echo $fact['value']; ?>
+										</div>
+									</div>
+								<?php endforeach;?>
+							</div>
+						<?php endif; ?>
 				</div>
 			</div>
 			<?php endif; ?>							
