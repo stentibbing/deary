@@ -1016,6 +1016,7 @@ main#primary {
     }
     &.mobile {
       display: none;
+      margin: 0 0 30px;
       @media (max-width: $breakpoint-mobile) {
         display: flex;
       }

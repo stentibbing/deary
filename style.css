@@ -1061,6 +1061,7 @@ main#primary {
 
 .nm-scroller .nm-scroller-nav.mobile {
   display: none;
+  margin: 0 0 30px;
 }
 
 @media (max-width: 768px) {
